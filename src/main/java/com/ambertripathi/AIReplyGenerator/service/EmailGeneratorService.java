@@ -26,7 +26,7 @@ public class EmailGeneratorService {
         //prompt build
         String prompt = buildPrompt(emailRequest);
         //Craft the request
-        Map<String, Object> requestBody = Map.of("contents", Map.of("Parts", Map.of("text", prompt)));
+        Map<String, Object> requestBody = Map.of("contents", Map.of("parts", Map.of("text", prompt)));
         //Do request and get response
         String response = webClientBuilder.post()
                 .uri(geminiApiUrl + geminiApikey)
